@@ -1,0 +1,155 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>DJHK</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/currency.js"></script>
+
+
+<style>
+  h4 {margin-top:2vw;margin-bottom:2vw;text-align:center;}
+  iframe {background-color:white;border-style:inset;}
+  a:hover {color:orange;background-color: transparent;text-decoration: underline;}
+  .searchlink {color: blue;font-size: 1.1em;font-weight: bold }
+  .searchdate {color:purple; font-size:.9em;font-weight:normal;}
+  #recentposts {text-align:center;margin:1vw;padding:1vw;background-color;}
+  hr {display: block;margin-top: 1em;margin-bottom:2em;margin-left: auto;margin-right: auto;border-style: inset;border-width: 1px;}
+  #searchbox {padding:1vw;text-align:center;background-color:rgb(240,245,255)}
+  #loginform {text-align:center;padding:3vw}
+  .writingcontainer {padding:2vw; background-color:white;}
+
+</style>
+
+
+</head>
+<body>
+
+<div class="alert alert-success alert-dismissible">
+	<button type="button" class="close" data-dismiss="alert">&times;</button>
+	<strong> Attention!</strong> I dont yet have a mobile version. Sorry.
+</div>
+
+ <br>
+ <div class="container" style="padding:10px;background:rgb(245,245,245);border-radius:5px">
+	  <div class="container" style="background:white;border-radius:9px">
+		  <br>
+		  <h2> The Blog <div class="spinner-grow text-warning"></div> </h2>
+		  <br>
+		  <ul class="nav nav-tabs" role="tablist">
+			<li class="nav-item">
+			  <a class="nav-link active" data-toggle="tab" href="#home">Home</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" data-toggle="tab" href="#menu1">Writings</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" data-toggle="tab" href="#menu5">TheBoringClub</a>
+			</li>
+
+		  </ul>
+		    <!-- -----------------------------           Tab panes          -------------------- -->
+		  <div class="tab-content">
+			  <div id="home" class="container tab-pane active"><br>
+				  <div class="row" style="padding:2vw">
+					   <div class="col-sm-7" >
+						  <h4 style="text-align:left">Greetings, fellow inhabitants! </h4>
+						  <p>What a great time to be alive, and how wonderful it is to be in existence. We find ourselves in a strange place, all of us, in this bizarre reality. None of us has not a clue what is going on here, and neither do I. We are just brought forth into existence and find ourselves in a very, very strange place, with full of strange things- yes, this also includes you- and stranded here without a single instruction or explanation for it all. What kind of situation is this?
+						  <a href="#greetings" data-toggle="collapse">Click me to read the rest</a> </p>
+						  <div id="greetings" class="collapse">
+							  <p>For the past year, my mind has been plagued by this mystery. I am befuddled by my own existence; I am simply baffled by everything, even rocks. I no longer find anything to be normal, because none of this is normal at all! Everyone around me goes on about their lives as if everything is perfectly normal, acting as if there is nothing else going on beyond their little life. And this is driving me nuts. There is something clearly amiss here- just look at all the freaky stuffs around you! Not a single thing is normal! </p>
+							  <p>I used to think that I was the crazy one for thinking this way, but I finally came to the conclusion that it is the others who are delusional- they just happen to be the majority. You can either choose to disagree with me and continue on your life pretending that everything is perfectly normal, or you can choose to let me persuade you to see things as they truly are. One of the goals of this website is to share my view of the world, not only because I feel frustrated by others’ insularity, but also because there is really nothing quite like it. </p>
+						  </div>
+					   </div>
+
+					   <div class="col-sm-5" style="background-color:lightgrey;">
+							<h4>About this Place</h4>
+							<p>The main purpose of this website is to offer the world what values I have to offer. I have many ambitious goals, some including beating the market and striking rich, disabusing humanity of its notions of relativity, and finding some answers for all the craziness that I am here witnessing.
+							<a href="#aboutthisplace"  data-toggle="collapse">Click me to read the rest</a>
+							<div id="aboutthisplace" class="collapse"> As you can see, I have much to do as these are seemingly unreachable dreams, but if I can come through at least of these plans, I see it as a worthwhile win, and I want to share that with others. </p>
+								<p>Life is short. I don’t know if there anything beyond this life, but whatever the case may be, it is certain that we aren’t just here to waste it. I believe that a life is wasted when one lives and dies without ever realizing what life truly is. No one knows what life is about but we can realize how extraordinary it truly is. This realization offers me a sense of purpose, appriciation and curiosty- and I want to share and cherish this with others as well.</p>
+							</div>
+					   </div>
+				   </div>
+				   <hr>
+
+				  <div class="jumbotron" style="padding-bottom:2vw;padding-top:2vw;">
+					  <div style="text-align:center">
+						<h4>Latest Posts & Updates </h4>
+						<p><strong> Search Engine:</strong> <input id="searchable" type="text" placeholder="Search by keyword"></p>
+					  </div>
+				  </div>
+
+				  <script>
+					$(document).ready(function(){
+					  $("#searchable").on("keyup", function() {
+					  var value = $(this).val().toLowerCase();
+					  $("#search *").filter(function() {
+					  $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+						  });
+						});
+					  });
+				  </script>
+
+				   <div id="search">     <!------- searchable -------->
+
+             <div class="jumbotron" id="searchbox">
+							<p><a class="searchlink" href="https://theboringspace.com/writings/theabyss.php">The Abyss <span class="searchdate"> (New!) <i>#8/8/19 #BlogPost #Writing #Reality </i></a></span></p>
+					   </div>
+
+					   <div class="jumbotron" id="searchbox">
+							<p><a class="searchlink" href="https://danieljhkim.com/theboringclub/signup.php">TheBoringClub <span class="searchdate"> <i>#7/13/19 #theboringclub #CreateYourOwnWebsite #websiteMaker </i></a></span></p>
+							<div class= 'writingcontainer'>
+								<p>Register to create your own website for free! <b>The access-code is 123.</b> (for limited time only)</p>
+							</div>
+					   </div>
+
+					   <div class="jumbotron" id="searchbox">
+						  <p><a class="searchlink" href="https://photography.danieljhkim.com">My Photograph-Gallary <span class="searchdate"> <i>#6/17/19 #photograph #gallary </i></a></span></p>
+						  <iframe src="https://photography.danieljhkim.com" style="width:80%;height:520px"></iframe>
+					   </div>
+
+					   <div class="jumbotron" id="searchbox">
+						  <p><a class="searchlink" href="https://danieljhkim.com/tabs/science/solarclock.html">Solar Clock <span class="searchdate">(Planetary Position Tracking System) <i>#5/17/19 #science #astronomy </i></a></span></p>
+						  <iframe src="https://danieljhkim.com/tabs/science/solarclock.html" style="width:415px;height:580px"></iframe>
+						  <br>
+					   </div> <br>
+				   </div>
+			   </div>
+
+			   <div id="menu1" class="container tab-pane fade" style=""><br>
+					<h3>MyBlog</h3>
+				   <div class="container" style="background-color:white;padding:2vw;width:100%">
+					<iframe src='myblog.php' style='width:100%;border-style:hidden;height:800px;padding:1vw'> </iframe>
+				   </div>
+			   </div>
+
+				<div id="menu5" class="container tab-pane fade"><br>
+					<h3>TheBoringClub</h3>
+					<div class="jumbotron" id="loginform" style="background-color:rgb(240,245,255)">
+						<p>Join the club and create your own blog in html and javascript! The access code is 123. <a class='searchlink' href='https://danieljhkim.com/theboringclub/signup.php'>Link here.</a></p>
+					</div>
+				</div>
+
+
+
+			</div>
+			<br>
+		</div>
+	</div>
+
+<div class="jumbotron" style="padding:2vw;margin:2vw;text-align:center">
+	  <p id="pp">All Rights Reserved</p>
+</div>
+<br>
+
+</body>
+</html>
